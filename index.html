@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+[10:49, 25/11/2025] $T£B!N: <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,122 +13,144 @@
         body {
             background-color: #1a1a1a;
             font-family: 'Oswald', sans-serif;
-        }
-        .serif-font {
-            font-family: 'Playfair Display', serif;
-        }
-        .poster-bg {
-            background: radial-gradient(circle at center, #2c1e16 0%, #0f0a08 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        /* Decorative circle in background */
-        .poster-bg::before {
-            content: '';
-            position: absolute;
-            top: 0%;
-            left: -10%;
-            width: 120%;
-            height: 50%;
-            background: radial-gradient(circle, rgba(217, 119, 6, 0.1) 0%, rgba(0,0,0,0) 70%);
-            z-index: 0;
-        }
-        .gold-text {
-            color: #d4af37;
-            text-shadow: 0px 2px 4px rgba(0,0,0,0.5);
-        }
-        .gold-border {
-            border-color: #d4af37;
-        }
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-        }
-        @media print {
-            .no-print { display: none !important; }
-            body { -webkit-print-color-adjust: exact; }
-        }
-    </style>
+    …
+[11:13, 25/11/2025] $T£B!N: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elite Cake Menu</title>
+
+<style>
+/* ------------------------------------------
+   FORCE A4 ONE-PAGE PRINT
+-------------------------------------------*/
+@page {
+    size: A4;
+    margin: 0;
+}
+
+/* ------------------------------------------
+   AUTO-FIT CONTENT TO A4 PAGE
+-------------------------------------------*/
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .a4-wrapper {
+        width: 794px;
+        height: 1123px;
+        overflow: hidden;
+        position: relative;
+        transform-origin: top left;
+    }
+
+    .scale-print {
+        transform: scale(var(--print-scale));
+        transform-origin: top left;
+    }
+}
+
+/* ------------------------------------------
+   GENERAL DESIGN STYLE
+-------------------------------------------*/
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f1f1f1;
+}
+
+.poster-bg {
+    width: 100%;
+    height: 100%;
+    background-image: url('your-background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    box-sizing: border-box;
+    color: #fff;
+    position: relative;
+}
+
+/* Top-right logo */
+.logo-top-right {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 120px;
+    height: auto;
+}
+
+/* Title */
+.menu-title {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Menu Items */
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin: 5px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 4px;
+}
+</style>
 </head>
-<body class="min-h-screen flex flex-col items-center py-8 px-4">
+<body>
 
-    <div class="poster-bg w-full max-w-2xl shadow-2xl relative text-white flex flex-col" style="aspect-ratio: 1/1.414;">
-        
-        <div class="absolute inset-4 border-2 border-yellow-600/30 pointer-events-none z-10"></div>
-        <div class="absolute inset-6 border border-yellow-600/20 pointer-events-none z-10"></div>
+<!-- ⭐ A4 WRAPPER + AUTO SCALE CONTENT ⭐ -->
+<div class="a4-wrapper">
+    <div class="scale-print">
 
-        <header class="relative z-20 text-center pt-12 pb-6 px-8">
-            <div class="inline-block mb-2">
-                <i class="fas fa-star text-yellow-500 text-xl"></i>
-                <i class="fas fa-crown text-2xl text-yellow-400 mx-2"></i>
-                <i class="fas fa-star text-yellow-500 text-xl"></i>
-            </div>
-            <h1 class="text-6xl md:text-7xl font-bold uppercase tracking-tighter text-white drop-shadow-lg">Elite Cakes</h1>
-            <p class="serif-font text-2xl italic text-yellow-500 mt-2">- Premium Sale -</p>
-        </header>
+        <!-- ⭐ YOUR MENU CARD CONTENT STARTS ⭐ -->
+        <div class="poster-bg">
 
-        <div class="flex-grow px-8 py-4 relative z-20 grid grid-cols-1 gap-6">
-            
-            <div class="glass-panel p-6 rounded-lg relative">
-                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-yellow-600 text-black font-bold px-6 py-1 uppercase tracking-wider text-sm rounded shadow-lg">
-                    Everyday Favorites • 140g
-                </div>
-                
-                <div class="text-center mb-4 mt-2">
-                    <span class="text-5xl font-bold gold-text">₹53</span>
-                    <span class="text-gray-400 text-sm block uppercase tracking-widest">Per Pack</span>
-                </div>
+            <!-- LOGO ON TOP RIGHT -->
+            <img src="your-logo.png" class="logo-top-right">
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-center md:text-left">
-                    <div class="border-b border-gray-700 pb-1"><i class="fas fa-check text-yellow-600 text-xs mr-2"></i>Banana Pudding Cake</div>
-                    <div class="border-b border-gray-700 pb-1"><i class="fas fa-check text-yellow-600 text-xs mr-2"></i>Elite Veg Banana Pudding</div>
-                    <div class="border-b border-gray-700 pb-1"><i class="fas fa-check text-yellow-600 text-xs mr-2"></i>Dates Pudding Cake</div>
-                    <div class="border-b border-gray-700 pb-1"><i class="fas fa-check text-yellow-600 text-xs mr-2"></i>Elite Veg Dates Pudding</div>
-                    <div class="border-b border-gray-700 pb-1"><i class="fas fa-check text-yellow-600 text-xs mr-2"></i>Carrot Pudding Cake</div>
-                </div>
-            </div>
+            <div class="menu-title">ELITE CAKES MENU</div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                
-                <div class="glass-panel p-6 rounded-lg text-center flex flex-col justify-center">
-                    <h3 class="text-xl uppercase tracking-widest text-yellow-500 mb-1">Specialty</h3>
-                    <h2 class="serif-font text-2xl text-white mb-2">Plum Surprise</h2>
-                    <p class="text-gray-400 text-sm mb-3">330g Pack</p>
-                    <div class="mt-auto">
-                        <span class="text-4xl font-bold gold-text">₹200</span>
-                    </div>
-                </div>
-
-                <div class="glass-panel p-6 rounded-lg text-center flex flex-col justify-center">
-                    <h3 class="text-xl uppercase tracking-widest text-yellow-500 mb-1">Family Packs</h3>
-                    <p class="text-gray-400 text-sm mb-3">500g Big Packs</p>
-                    
-                    <ul class="text-sm text-gray-200 space-y-1 mb-3">
-                        <li>Dates Pudding Cake</li>
-                        <li>Jack Fruit Pudding Cake</li>
-                        <li>Plum Surprise Cake</li>
-                    </ul>
-                    
-                    <div class="mt-auto border-t border-gray-700 pt-2">
-                        <span class="text-4xl font-bold gold-text">₹250</span>
-                    </div>
-                </div>
-            </div>
+            <!-- SAMPLE MENU ITEMS -->
+            <div class="menu-item"><span>Black Forest</span><span>₹450</span></div>
+            <div class="menu-item"><span>White Forest</span><span>₹480</span></div>
+            <div class="menu-item"><span>Red Velvet</span><span>₹550</span></div>
+            <div class="menu-item"><span>Butterscotch</span><span>₹430</span></div>
+            <div class="menu-item"><span>Caramel Fusion</span><span>₹520</span></div>
+            <div class="menu-item"><span>Choco Truffle</span><span>₹600</span></div>
 
         </div>
-
-        <footer class="relative z-20 bg-yellow-600 text-black text-center py-6 mt-4">
-            <div class="uppercase tracking-widest text-sm font-bold mb-1">For Orders Contact</div>
-            <h2 class="text-3xl font-bold tracking-wide">ALDHO PULIYELIL</h2>
-            <div class="flex justify-center items-center gap-2 mt-1 text-xl font-bold">
-                <i class="fas fa-phone-alt"></i>
-                <span>+91 99957 72259</span>
-            </div>
-        </footer>
+        <!-- ⭐ YOUR MENU CARD CONTENT ENDS ⭐ -->
 
     </div>
-    <div class="h-12"></div>
+</div>
+
+<!-- AUTO SCALE SCRIPT -->
+<script>
+function adjustScale() {
+    const wrapper = document.querySelector('.a4-wrapper');
+    const content = document.querySelector('.scale-print');
+
+    const wrapperHeight = wrapper.offsetHeight;
+    const contentHeight = content.scrollHeight;
+
+    let scale = 1;
+
+    if (contentHeight > wrapperHeight) {
+        scale = wrapperHeight / contentHeight;
+    }
+
+    document.documentElement.style.setProperty('--print-scale', scale);
+}
+
+window.addEventListener('load', adjustScale);
+window.addEventListener('resize', adjustScale);
+</script>
 
 </body>
 </html>
