@@ -3,55 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KALOLSAVAM 2024</title>
+    <title>Elite Cake Sale Poster</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Oswald:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #f5f5f5; /* Light background color */
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
+            background-color: #1a1a1a;
+            font-family: 'Oswald', sans-serif;
         }
-        .badge {
-            background: linear-gradient(to right, #ff9800, #ffeb3b); /* Gradient background */
-            border-radius: 20px;
-            padding: 30px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            width: 300px;
+        .serif-font {
+            font-family: 'Playfair Display', serif;
         }
-        .badge h1 {
-            font-size: 36px;
-            color: #4a148c; /* Dark purple color */
-            margin: 0;
+        .poster-bg {
+            background: radial-gradient(circle at center, #2c1e16 0%, #0f0a08 100%);
+            position: relative;
+            overflow: hidden;
         }
-        .badge h2 {
-            font-size: 24px;
-            color: #d32f2f; /* Dark red color */
-            margin: 10px 0;
+        /* Decorative circle in background */
+        .poster-bg::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            width: 120%;
+            height: 50%;
+            background: radial-gradient(circle, rgba(217, 119, 6, 0.1) 0%, rgba(0,0,0,0) 70%);
+            z-index: 0;
         }
-        .badge h3 {
-            font-size: 20px;
-            color: #1976d2; /* Dark blue color */
-            margin: 10px 0;
+        .gold-text {
+            color: #d4af37;
+            text-shadow: 0px 2px 4px rgba(0,0,0,0.5);
         }
-        .footer {
-            margin-top: 20px;
-            font-size: 16px;
-            color: #555;
+        .gold-border {
+            border-color: #d4af37;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        @media print {
+            .no-print { display: none !important; }
+            body { -webkit-print-color-adjust: exact; }
         }
     </style>
 </head>
-<body>
-    <div class="badge">
-        <h1>MGJSOYA</h1>
-        <h2>KALOLSAVAM 2024</h2>
-        <h3>COORDINATOR</h3>
-        <div class="footer">
-            <p>Join us for a great event!</p>
-        </div>
+<body class="min-h-screen flex flex-col items-center py-8 px-4">
+
+    <div class="mb-6 flex gap-4 no-print">
+        <button onclick="window.print()" class="bg-yellow-600 text-white px-6 py-2 rounded hover:bg-yellow-700 transition font-bold tracking-wide shadow-lg">
+            <i class="fas fa-print mr-2"></i> PRINT POSTER
+        </button>
     </div>
+
+    <div class="poster-bg w-full max-w-2xl shadow-2xl relative text-white flex flex-col" style="aspect-ratio: 1/1.414;">
+        
+        <div class="absolute inset-4 border-2 border-yellow-600/30 pointer-events-none z-10"></div>
+        <div class="absolute inset-6 border border-yellow-600/20 pointer-events-none z-10"></div>
+
+        <header class="relative z-20 text-center pt-12 pb-6 px-8">
+            <div class="inline-block mb-2">
+                <i class="fas fa-star text-yellow-500 text-xl"></i>
+                <i class="fas fa-crown text-2xl text-yellow-400 mx-2"></i>
+                <i class="fas fa-star text-yellow-500 text-xl"></i>
+            </div>
+            <h1 class="text-6xl md:text-7xl font-bold uppercase tracking-tighter text-white drop-shadow-lg">Elite Cakes</h1>
+            <p class="serif-font text-2xl italic text-yellow-500 mt-2">- Premium Sale -</p>
+        </header>
+
+        <div class="flex-grow px-8 py-4 relative z-20 grid grid-cols-1 gap-6">
+            
+            <div class="glass-panel p-6 rounded-lg relative">
+                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-yellow-600 text-black font-bold px-6 py-1 uppercase tracking-wider text-sm rounded shadow-lg">
+                    Everyday Favorites • 140g
+                </div>
+                
+                <div class="text-center mb-4 mt-2">
+                    <span class="text-5xl font-bold gold-text">₹53</span>
+                    <span class="text-gray-400 text-sm block uppercase tracking-widest">Per Pack</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-center md:text-left">
+                    <div class="border-b border-gray-700 pb-1"><i class="fas fa-check text-yellow-600 text-xs mr-2"></i>Banana Pudding Cake</div>
+                    <div class="border-b border-gray-700 pb-1"><i class="fas fa-check text-yellow-600 text-xs mr-2"></i>Elite Veg Banana Pudding</div>
+                    <div class="border-b border-gray-700 pb-1"><i class="fas fa-check text-yellow-600 text-xs mr-2"></i>Dates Pudding Cake</div>
+                    <div class="border-b border-gray-700 pb-1"><i class="fas fa-check text-yellow-600 text-xs mr-2"></i>Elite Veg Dates Pudding</div>
+                    <div class="border-b border-gray-700 pb-1"><i class="fas fa-check text-yellow-600 text-xs mr-2"></i>Carrot Pudding Cake</div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <div class="glass-panel p-6 rounded-lg text-center flex flex-col justify-center">
+                    <h3 class="text-xl uppercase tracking-widest text-yellow-500 mb-1">Specialty</h3>
+                    <h2 class="serif-font text-2xl text-white mb-2">Plum Surprise</h2>
+                    <p class="text-gray-400 text-sm mb-3">330g Pack</p>
+                    <div class="mt-auto">
+                        <span class="text-4xl font-bold gold-text">₹200</span>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-6 rounded-lg text-center flex flex-col justify-center">
+                    <h3 class="text-xl uppercase tracking-widest text-yellow-500 mb-1">Family Packs</h3>
+                    <p class="text-gray-400 text-sm mb-3">500g Big Packs</p>
+                    
+                    <ul class="text-sm text-gray-200 space-y-1 mb-3">
+                        <li>Dates Pudding Cake</li>
+                        <li>Jack Fruit Pudding Cake</li>
+                        <li>Plum Surprise Cake</li>
+                    </ul>
+                    
+                    <div class="mt-auto border-t border-gray-700 pt-2">
+                        <span class="text-4xl font-bold gold-text">₹250</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="relative z-20 bg-yellow-600 text-black text-center py-6 mt-4">
+            <div class="uppercase tracking-widest text-sm font-bold mb-1">For Orders Contact</div>
+            <h2 class="text-3xl font-bold tracking-wide">ALDHO PULIYELIL</h2>
+            <div class="flex justify-center items-center gap-2 mt-1 text-xl font-bold">
+                <i class="fas fa-phone-alt"></i>
+                <span>+91 99957 72259</span>
+            </div>
+        </footer>
+
+    </div>
+    <div class="h-12"></div>
+
 </body>
 </html>
