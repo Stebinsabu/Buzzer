@@ -49,6 +49,44 @@
             .no-print { display: none !important; }
             body { -webkit-print-color-adjust: exact; }
         }
+        @media print {
+    /* Reduce the entire poster size */
+    .poster-bg {
+        transform: scale(0.85); /* Reduce size to 85% */
+        transform-origin: top center;
+    }
+
+    /* Reduce inner spacing for printing */
+    .poster-bg header {
+        padding-top: 40px !important;
+        padding-bottom: 20px !important;
+    }
+
+    .glass-panel {
+        padding: 16px !important;
+    }
+
+    /* Reduce font sizes slightly */
+    .poster-bg h1 {
+        font-size: 3.5rem !important;
+    }
+
+    .poster-bg .serif-font {
+        font-size: 1.3rem !important;
+    }
+
+    .poster-bg span,
+    .poster-bg p,
+    .poster-bg li,
+    .poster-bg div {
+        font-size: 90% !important;
+    }
+
+    /* Remove margins on page */
+    @page {
+        margin: 0;
+    }
+}
     </style>
 </head>
 <body class="min-h-screen flex flex-col items-center py-8 px-4">
